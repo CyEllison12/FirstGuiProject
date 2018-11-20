@@ -13,11 +13,11 @@ public class Duck
 	{
 		return sound;
 	}
-	
-	public String toString()
-	{
-		String description = "I am a duck!";
 		
-		return description;
+		public String toString()
+		{
+			String description = "I am a duck!";
+			
+			return description;
+		}
 	}
-}
