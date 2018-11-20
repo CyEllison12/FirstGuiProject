@@ -1,19 +1,25 @@
 package gui.view;
 
 import javax.swing.JFrame;
+import gui.controller.GUIController;
 
 public class FirstFrame extends JFrame
 {
+	private GUIController appController;
+	private FirstPanel appPanel;
 	
-	public FirstFrame()
+	public FirstFrame(GUIController appController)
 	{
-		super();
+		super();//have to add the super every time you make a frame.
+		this.appController = appController;
+		this.appPanel = new FirstPanel(appController);
 		
 		setupFrame();
 	}
 	
-	private void setupFrame()
+	private void setupFrame() //sets up the actual frame. Have to add these four every time.
 	{
+		this.setContentPane(appPanel);
 		this.setSize(800, 800);
 		this.setTitle("My First GUI");
 		this.setResizable(true);
